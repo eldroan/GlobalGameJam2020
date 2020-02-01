@@ -95,6 +95,10 @@ public class TextManager : MonoBehaviour
                         _clickedNext = false;
                         LoadNextBlock();
                     }
+                    else
+                    {
+                        AudioManager.Instance.StopSpecialFX();
+                    }
                 }
             }
         }
@@ -122,6 +126,7 @@ public class TextManager : MonoBehaviour
         Debug.Log($"Loading block number {i} o {_blockCount}");
         if (i < _blockCount)
         {
+            AudioManager.Instance.PlaySpecialFX(Constants.AudioClips.TYPEWRITER);
             blockIndex = i;
             currentText.text = string.Empty;
             _blockTextCutOff = 0;
