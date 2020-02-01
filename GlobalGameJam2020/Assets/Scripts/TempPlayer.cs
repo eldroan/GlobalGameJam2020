@@ -25,7 +25,7 @@ public class TempPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Inventory"))
+        if (Input.GetButtonDown(Constants.InputKey.INVENTORY))
         {
             showInventory = !showInventory;
             inventory.gameObject.SetActive(showInventory);

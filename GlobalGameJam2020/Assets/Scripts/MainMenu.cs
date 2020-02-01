@@ -7,9 +7,6 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
-    private AudioClip music;
-
-    [SerializeField]
     private Button[] buttons;
 
     [SerializeField]
@@ -18,9 +15,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject settingsScreen;
 
+    bool a = false;
+
     private void Start()
     {
-        AudioManager.Instance.PlayMusic(music);
+        AudioManager.Instance.PlayMusic(Constants.AudioClips.SAD_PIANO);
         buttons[0].Select();
     }
 
@@ -37,6 +36,11 @@ public class MainMenu : MonoBehaviour
     public void ShowCredits()
     {
         //TODO: lo que queramos hacer
+        if (a == false)
+            AudioManager.Instance.PlaySpecialFX(Constants.AudioClips.TYPEWRITER);
+        else
+            AudioManager.Instance.StopSpecialFX();
+        a = !a;
     }
 
     public void Quit()

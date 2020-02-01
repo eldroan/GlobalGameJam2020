@@ -9,6 +9,10 @@ public class Startup : MonoBehaviour
     void Start()
     {
         //TODO: cuando termine una animación o video.
+    }
+
+    public void OnSplashFinished()
+    {
         SceneManager.LoadScene(Constants.Scenes.MENU_SCENE);
     }
 }

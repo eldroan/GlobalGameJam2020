@@ -9,4 +9,15 @@ public static class Constants
         public static readonly string GAME_SCENE = "game";
         public static readonly string MENU_SCENE = "menu";
     }
+
+    public static class AudioClips
+    {
+        public static readonly string SAD_PIANO = "sad_piano";
+        public static readonly string TYPEWRITER = "typewriter";
+    }
+
+    public static class InputKey
+    {
+        public static readonly string INVENTORY = "Inventory";
+    }
 }
