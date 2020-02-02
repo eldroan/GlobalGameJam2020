@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PlayerTest : MonoBehaviour
 {
-    ParticleSystem particleSystem;
+    ParticleSystem myParticleSystem;
+    Animator animator;
     void Start()
     {
-        particleSystem = GetComponent<ParticleSystem>();
+        myParticleSystem = GetComponent<ParticleSystem>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
-            particleSystem.Play();
+        {
+            myParticleSystem.Play();
+            animator.SetTrigger("Possess");
+        }
     }
 }
