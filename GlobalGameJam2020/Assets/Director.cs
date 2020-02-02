@@ -35,7 +35,7 @@ public class Director : MonoBehaviour
                 activeLevel("Livingroom", player);
             break;
             case "Alma_bedroom":
-                activeLevel("Alma_bedroom", player);
+                //TODO: dialogo de no poder entrar
             break;
             case "Hall":
                 activeLevel("Hall", player);
@@ -47,22 +47,29 @@ public class Director : MonoBehaviour
                 activeLevel("Sister_bedroom", player);
             break;
             case "Sister_bedroom2":
+                //Puede abrirla?
                 activeLevel("Sister_bedroom2", player);
             break;
             case "TV":
                 interactTV(player);
             break;
             case "Atic_Box":
-                
+                //Pieza de maquina de escribir
             break;
             case "Picture":
-                
+                //Cuadro
             break;
             case "Drawer":
-                
+                //Cajón depende de llave (la del living)
+            break;
+            case "Key":
+                //Interactuar (La del pórtico)
             break;
             case "Dog":
                 interactDog(player);
+            break;
+            case "Alfombra":
+                //Texto de acá había una llave
             break;
         }
     }
