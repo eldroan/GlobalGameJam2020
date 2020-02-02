@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -13,9 +11,12 @@ public class MainMenu : MonoBehaviour
     private GameObject creditsScreen;
 
     [SerializeField]
-    private GameObject settingsScreen;
+    private Image logo;
 
-    bool a = false;
+    [SerializeField]
+    private CameraController cameraController;
+
+    private bool onCredits = false;
 
     private void Start()
     {
@@ -25,22 +26,24 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
+        //cameraController.PlayStartGameAnimation();
         SceneManager.LoadScene(Constants.Scenes.GAME_SCENE);
-    }
-
-    public void Settings()
-    {
-        settingsScreen.SetActive(true);
     }
 
     public void ShowCredits()
     {
-        //TODO: lo que queramos hacer
-        if (a == false)
-            AudioManager.Instance.PlaySpecialFX(Constants.AudioClips.TYPEWRITER);
+        if (onCredits)
+        {
+            logo.gameObject.SetActive(true);
+            creditsScreen.SetActive(false);
+            onCredits = false;
+        }
         else
-            AudioManager.Instance.StopSpecialFX();
-        a = !a;
+        {
+            logo.gameObject.SetActive(false);
+            creditsScreen.SetActive(true);
+            onCredits = true;
+        }
     }
 
     public void Quit()
