@@ -49,6 +49,7 @@ public class PuzzleManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(this.gameObject.transform.parent.gameObject);
         }
         else
         {
@@ -57,9 +58,7 @@ public class PuzzleManager : MonoBehaviour
         
         _setupReady = false;
         _currentcamera =  GameObject.FindGameObjectWithTag("puzzleCamera").GetComponent<Camera>() as Camera;
-        _currentcamera.enabled = true;
-        if(_callerCamera != null)
-            _callerCamera.enabled = false;
+        
 
         //Begin caca de codigo
         _adjacentDistance = Vector3.Distance(pieces[0].transform.position,pieces[1].transform.position);
@@ -118,6 +117,10 @@ public class PuzzleManager : MonoBehaviour
 
     private void StartPuzzle(Texture puzzleTexture = null)
     {
+        this.gameObject.transform.parent.gameObject.SetActive(true);
+        _currentcamera.enabled = true;
+        if(_callerCamera != null)
+            _callerCamera.enabled = false;
         _snapped = false;
         _setupReady = false;
         _piecesTransform = new Dictionary<string, Transform>();

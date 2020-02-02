@@ -103,7 +103,8 @@ public class Director : MonoBehaviour
                 {
                     AudioManager.Instance.PlayFX("Drawer");
                     //TODO: Puzzle
-                    ChangeAct();
+                    PuzzleManager.Instance.LoadPuzzle("diario",() => ChangeAct(),levels.Select(x => x).FirstOrDefault(x => x.Active == true).LevelObject.GetComponentInChildren<Camera>());
+//                    ChangeAct();
                 }
                 else
                 {

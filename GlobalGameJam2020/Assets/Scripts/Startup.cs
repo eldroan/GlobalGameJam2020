@@ -13,6 +13,7 @@ public class Startup : MonoBehaviour
 
     public void OnSplashFinished()
     {
+        PuzzleManager.Instance.gameObject.transform.parent.gameObject.SetActive(false);
         SceneManager.LoadScene(Constants.Scenes.MENU_SCENE);
     }
 }
