@@ -17,11 +17,45 @@ public class Director : MonoBehaviour
     public static Director Instance { get; private set;}
 
     [SerializeField] private Level[] levels;
+    [SerializeField] private Item[] items;
 
-    private static bool interactuoConAlfombra;
-    
+    private bool interactuoConAlfombra;
+    private bool haveDrawerKey = false;
+
     private void Awake() {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        var s = GameObject.Find("SogaInteractor");
+        var s2 = GameObject.Find("SisterInteractor2");
+
+        s.GetComponent<Collider2D>().enabled = false;
+        s2.GetComponent<Collider2D>().enabled = false;
+
+        foreach (var lvl in levels)
+        {
+            if (lvl.LevelObject != null)
+                lvl.LevelObject.SetActive(lvl.Active);
+        }
+    }
+
+    public void ChangeAct()
+    {
+        var s = GameObject.Find("SogaInteractor");
+        var s2 = GameObject.Find("SisterInteractor2");
+        var s3 = GameObject.Find("SisterInteractor");
+
+        s.GetComponent<Collider2D>().enabled = true;
+        s2.GetComponent<Collider2D>().enabled = true;
+        s3.GetComponent<Collider2D>().enabled = false;
+
+        foreach (var lvl in levels)
+        {
+            lvl.LevelObject.SetActive(lvl.Key == "Atico");
+            lvl.Active = lvl.Key == "Atico";
+        }
     }
 
     public void Interact(string key, TempPlayer player)
@@ -37,7 +71,7 @@ public class Director : MonoBehaviour
                 activeLevel("Livingroom", player);
             break;
             case "Alma_bedroom":
-                //TODO: dialogo de no poder entrar
+                TextManager.Instance.LoadSequence(player, "");
             break;
             case "Hall":
                 activeLevel("Hall", player);
@@ -49,21 +83,28 @@ public class Director : MonoBehaviour
                 activeLevel("Sister_bedroom", player);
             break;
             case "Sister_bedroom2":
-                //Puede abrirla?
                 activeLevel("Sister_bedroom2", player);
             break;
             case "TV":
                 interactTV(player);
             break;
             case "Atic_Box":
-                //Pieza de maquina de escribir
+                TextManager.Instance.LoadSequence(player, "");
             break;
             case "Picture":
-                //Cuadro
+                TextManager.Instance.LoadSequence(player, "");
             break;
             case "Drawer":
-                //Cajón depende de llave (la del living)
-            break;
+                if (haveDrawerKey)
+                {
+                    AudioManager.Instance.PlayFX("Drawer");
+                    //TODO: Puzzle
+                }
+                else
+                {
+                    TextManager.Instance.LoadSequence(player, "");
+                }
+                break;
             case "Key":
                 interactPorticoKey(player);
             break;
