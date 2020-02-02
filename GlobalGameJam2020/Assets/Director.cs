@@ -12,8 +12,8 @@ public class Director : MonoBehaviour
         public string Key;
         public GameObject LevelObject;
         public bool Active;
-
     }
+
     public static Director Instance { get; private set;}
 
     [SerializeField] private Level[] levels;
@@ -73,14 +73,15 @@ public class Director : MonoBehaviour
             case "Alfombra":
                 //Texto de acá había una llave
                 interactuoConAlfombra = true;
-                TextManager.Instance.LoadSequence("");
+                //TextManager.Instance.LoadSequence(player, "");
+                player.AlowInteracting();
             break;
         }
     }
 
     private void interactTV(TempPlayer player) {
         var living = GameObject.Find("Living");
-
+        AudioManager.Instance.PlayFX("Susto");
         living.GetComponent<RandomizeColor>().TurnOff();
         player.AlowInteracting();
 
@@ -91,7 +92,7 @@ public class Director : MonoBehaviour
         var living = GameObject.Find("Portico");
 
         living.GetComponent<PorticoGameplay>().Play();
-        player.AlowInteracting();
+        //player.AlowInteracting();
     }
 
     private void interactDog(TempPlayer player) {
@@ -100,12 +101,13 @@ public class Director : MonoBehaviour
             var living = GameObject.Find("Portico");
 
             living.GetComponent<PorticoGameplay>().PararPerro();
-            player.AlowInteracting();
+            //player.AlowInteracting();
         }
         else
         {
-            AudioManager.Instance.PlayFX("dog");
+            AudioManager.Instance.PlayFX("Dog");
         }
+        player.AlowInteracting();
     }
 
     private void activeLevel(string levelName, TempPlayer player) {
@@ -118,6 +120,6 @@ public class Director : MonoBehaviour
         newLvl.Active = true;
         newLvl.LevelObject.SetActive(true);
 
-        player.AlowInteracting();
+        player?.AlowInteracting();
     }
 }
