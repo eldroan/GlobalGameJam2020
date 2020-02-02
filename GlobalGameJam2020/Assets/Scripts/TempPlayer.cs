@@ -12,8 +12,17 @@ public class TempPlayer : MonoBehaviour
     private string keyInteract;
     private bool showInventory = false;
     private Vector3 lastPosition;
+    private ParticleSystem myParticleSystem;
+    private Animator animator;
 
     private bool interacting = false;
+
+    void Start()
+    {
+        myParticleSystem = GetComponent<ParticleSystem>();
+        animator = GetComponent<Animator>();
+        myParticleSystem.Stop();
+    }
 
     private void Update()
     {        
@@ -55,5 +64,11 @@ public class TempPlayer : MonoBehaviour
     public void AlowInteracting() 
     {
         interacting = false;
+    }
+    
+    public void Possess()
+    {
+        myParticleSystem.Play();
+        animator.SetTrigger("Possess");
     }
 }

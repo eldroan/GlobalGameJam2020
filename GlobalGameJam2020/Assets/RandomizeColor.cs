@@ -7,12 +7,21 @@ public class RandomizeColor : MonoBehaviour
 {
     [SerializeField] private GameObject[] image;
     [SerializeField] private float deltaTime = 0.2f;
+    [SerializeField] private float turnOffTime = 0.5f;
 
     private float time;
+
+    private float turnOffCurrentTime = 0;
+
 
     // Update is called once per frame
     void Update()
     {
+        if (turnOffCurrentTime > 0) {
+            turnOffCurrentTime -= Time.deltaTime;
+            return;
+        }
+
         if (time >= deltaTime)
         {
             float r = Random.value;
@@ -30,6 +39,6 @@ public class RandomizeColor : MonoBehaviour
     {
         image[0].GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0f);
         image[1].GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
-
+        turnOffCurrentTime = turnOffTime;
     }
 }

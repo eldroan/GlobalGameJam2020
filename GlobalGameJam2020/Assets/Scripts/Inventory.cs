@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
 
     public static Inventory Instance {get; private set;}
 
-    Boolean show;
+    bool show;
 
     private void Awake() {
         Instance = this;
