@@ -1052,7 +1052,7 @@ MonoBehaviour:
   timeThreshold: 0.11
   topRight: {fileID: 1575048187}
   bottomLeft: {fileID: 1783278284}
-  testTexture: {fileID: 2800000, guid: 50cb9dc7e10514eeea78c2ccce7a00cb, type: 3}
+  testTexture: {fileID: 2800000, guid: d075333b5df13495aa4d3bf40680b927, type: 3}
 --- !u!1 &1212288288
 GameObject:
   m_ObjectHideFlags: 0
