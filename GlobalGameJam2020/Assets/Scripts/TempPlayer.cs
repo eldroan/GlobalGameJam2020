@@ -18,8 +18,8 @@ public class TempPlayer : MonoBehaviour
     private void Update()
     {        
         if (Input.GetButtonDown("Interact") && enabledInteraction) {
-            Director.Instance.Interact(keyInteract);
             interacting = !interacting;
+            Director.Instance.Interact(keyInteract, this);
         }
 
         if (!interacting) {        
@@ -50,5 +50,10 @@ public class TempPlayer : MonoBehaviour
     {
         this.keyInteract = "";
         enabledInteraction = false;
+    }
+
+    public void AlowInteracting() 
+    {
+        interacting = false;
     }
 }
