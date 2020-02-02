@@ -61,6 +61,9 @@ public class Director : MonoBehaviour
             case "Drawer":
                 
             break;
+            case "Dog":
+                interactDog(player);
+            break;
         }
     }
 
@@ -70,6 +73,13 @@ public class Director : MonoBehaviour
         living.GetComponent<RandomizeColor>().TurnOff();
         player.AlowInteracting();
 
+    }
+
+    private void interactDog(TempPlayer player) {
+        var living = GameObject.Find("Portico");
+
+        living.GetComponent<PorticoGameplay>().PararPerro();
+        player.AlowInteracting();
     }
 
     private void activeLevel(string levelName, TempPlayer player) {

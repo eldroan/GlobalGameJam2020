@@ -420,11 +420,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portico
       objectReference: {fileID: 0}
-    - target: {fileID: 3026810607700116670, guid: 74bcadc0f63db45f7b0e76825529e3f9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3026810607700116671, guid: 74bcadc0f63db45f7b0e76825529e3f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -552,7 +547,7 @@ PrefabInstance:
     - target: {fileID: 3961178118938348969, guid: d819ee35a82864b29a0d33be17df3ab4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d819ee35a82864b29a0d33be17df3ab4, type: 3}
