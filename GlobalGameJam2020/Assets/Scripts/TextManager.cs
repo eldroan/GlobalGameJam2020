@@ -124,7 +124,7 @@ public class TextManager : MonoBehaviour
         }
         
         _currentPlayer = currentPlayer;
-        
+        _haveSequenceToPlay = true;
         var contents = File.ReadAllText(filePath);
         Debug.Log(contents);
         currentSequence = Sequence.FromJson(contents);

@@ -1,0 +1,29 @@
+{
+  "blocks":[
+    {
+      "title":"Carla",
+      "text":"...salí, no quiero hablar ahora.",
+      "image":"carla-avatar"
+    },
+    {
+      "title":"Ernesto",
+      "text":"Carla, pasaron 5 años ya, Camila ya lo superó, yo ya lo superé. No podés culparte toda la vida. Nadie mas que vos te culpa. ",
+      "image":"ernesto-avatar"
+    },
+    {
+      "title":"Carla",
+      "text":"¡¿Quién estuvo ahí cuando pasó?! ¿Quién fue la que no llegó a tiempo al hospital? Yo. Yo fui a la que le dijeron que si llegaba 15 minutos antes se podía salvar. ",
+      "image":"carla-avatar"
+    },
+    {
+      "title":"Ernesto",
+      "text":"No fue tu culpa, basta. Los médicos dijeron que no había ninguna chance de que sobreviva. ",
+      "image":"ernesto-avatar"
+    },
+    {
+      "title":"Carla",
+      "text":"A veces siento como si estuviera acá... la extraño. ",
+      "image":"carla-avatar"
+    }
+  ]
+}

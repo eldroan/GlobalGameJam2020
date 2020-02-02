@@ -20,4 +20,12 @@ public static class Constants
     {
         public static readonly string INVENTORY = "Inventory";
     }
+    
+    public static class TextSequences
+    {
+        public static readonly string LECTURA_DIARIO = "lectura-diario.json";
+        public static readonly string DIALOGO_PIEZA_PADRES_ACTO2 = "dialogo-pieza-padres-acto2.json";
+        public static readonly string CARTA_ALMA = "carta-alma.json";
+        public static readonly string POE_DIALOGO = "poe-dialogo.json";
+    }
 }
