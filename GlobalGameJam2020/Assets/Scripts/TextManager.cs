@@ -28,6 +28,7 @@ public class TextManager : MonoBehaviour
     private bool _showing;
     private bool _clickedNext;
     private int _blockCount;
+    private bool _haveSequenceToPlay = false;
     private TempPlayer _currentPlayer;
 
     public static TextManager Instance { get; private set; }
@@ -41,6 +42,7 @@ public class TextManager : MonoBehaviour
             DontDestroyOnLoad(this);
             _currentPlayer = null;
             _showing = false;
+             _haveSequenceToPlay = false;
             textBoxTransform.position =
                 new Vector3(textBoxTransform.position.x, -heightOffset, textBoxTransform.position.y);
         }
@@ -64,6 +66,7 @@ public class TextManager : MonoBehaviour
             Debug.Log("Bajo");
             textBoxTransform.DOMoveY(-heightOffset, textBoxMovingDuration, true);
             _showing = false;
+            _haveSequenceToPlay = false;
             
             if (_currentPlayer != null) 
                 _currentPlayer.AlowInteracting();
@@ -74,7 +77,7 @@ public class TextManager : MonoBehaviour
     {
         //Behold la cascada de caca
         //si hay una secuencia y el bloque actual es menor que el total de bloques
-        if (currentSequence != null && blockIndex <= _blockCount)
+        if (_haveSequenceToPlay && blockIndex <= _blockCount)
         {
             //Si el texto que voy mostrando del bloque es menor al total del texto del bloque y el usuario no clickeo
             if (_blockTextCutOff <= _blockTextMax && !_clickedNext)
