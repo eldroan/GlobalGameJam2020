@@ -8,6 +8,10 @@ public class Door : MonoBehaviour
     
     [SerializeField] private Renderer render;
 
+    [SerializeField] private bool noReinteracting;
+
+    public bool NoReointeracting { get { return noReinteracting; }  }
+
     private void OnTriggerEnter2D(Collider2D other) {
 
         if (other.gameObject.CompareTag("Player")) {
@@ -20,7 +24,6 @@ public class Door : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) {
             render.material.SetFloat("_Outline", 0);
             other.GetComponent<TempPlayer>().DisableInteract();
-
         }
     }
 }

@@ -248,7 +248,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.835648
+  orthographic size: 10.7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -336,6 +336,18 @@ PolygonCollider2D:
       - {x: 18.990383, y: 0.027656555}
       - {x: 19.161947, y: 8.003947}
       - {x: 19.06391, y: 0.060894966}
+--- !u!114 &171326282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8815078234288279332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53f0c7e0da4fbef47a82890084326d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1936681550179151064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -397,6 +409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759789156384334067, guid: c751d1e5593db914c8e5db2de9d45f3c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 9053833269364759792, guid: c751d1e5593db914c8e5db2de9d45f3c,
         type: 3}
@@ -545,11 +562,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorInteract
       objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactor
+      objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: render
       value: 
       objectReference: {fileID: 9185069470209025605}
+    - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: key
+      value: Alfombra
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: noReinteracting
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: m_LocalPosition.x

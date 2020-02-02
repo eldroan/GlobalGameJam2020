@@ -447,6 +447,10 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: bfe84deff79ed544eac51c6f75588582, type: 3}
   - Key: typewriter
     Clip: {fileID: 8300000, guid: bc0985674825db54aa45332b2b09694a, type: 3}
+  - Key: Dog
+    Clip: {fileID: 8300000, guid: 46601b45a72cddf49a6e7e0545fd3b3b, type: 3}
+  - Key: Susto
+    Clip: {fileID: 8300000, guid: 277af870592e94844a191847e4ded604, type: 3}
   musicSource: {fileID: 6686510006853610035}
   fxSource: {fileID: 6686510006664704221}
   specialSource: {fileID: 204682909}

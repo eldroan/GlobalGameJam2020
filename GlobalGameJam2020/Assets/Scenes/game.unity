@@ -263,6 +263,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 110399840419869386}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923234789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3026810607700116670, guid: 74bcadc0f63db45f7b0e76825529e3f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3026810608708585970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &110399840419869386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -435,11 +441,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portico
       objectReference: {fileID: 0}
-    - target: {fileID: 3026810607700116670, guid: 74bcadc0f63db45f7b0e76825529e3f9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3026810607700116671, guid: 74bcadc0f63db45f7b0e76825529e3f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -567,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 3961178118938348969, guid: d819ee35a82864b29a0d33be17df3ab4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d819ee35a82864b29a0d33be17df3ab4, type: 3}
@@ -582,6 +583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Director
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412061454706122458, guid: 74be07aec24e54517bf1db7170e55f8e,
+        type: 3}
+      propertyPath: levels.Array.size
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3412061454706122458, guid: 74be07aec24e54517bf1db7170e55f8e,
         type: 3}
@@ -613,6 +619,26 @@ PrefabInstance:
       propertyPath: levels.Array.data[1].LevelObject
       value: 
       objectReference: {fileID: 2252758280670397658}
+    - target: {fileID: 3412061454706122458, guid: 74be07aec24e54517bf1db7170e55f8e,
+        type: 3}
+      propertyPath: levels.Array.data[7].Key
+      value: Portico
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412061454706122458, guid: 74be07aec24e54517bf1db7170e55f8e,
+        type: 3}
+      propertyPath: levels.Array.data[7].LevelObject
+      value: 
+      objectReference: {fileID: 1923234789}
+    - target: {fileID: 3412061454706122458, guid: 74be07aec24e54517bf1db7170e55f8e,
+        type: 3}
+      propertyPath: levels.Array.data[7].Active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412061454706122458, guid: 74be07aec24e54517bf1db7170e55f8e,
+        type: 3}
+      propertyPath: levels.Array.data[2].Active
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3412061454706122459, guid: 74be07aec24e54517bf1db7170e55f8e,
         type: 3}
       propertyPath: m_LocalPosition.x

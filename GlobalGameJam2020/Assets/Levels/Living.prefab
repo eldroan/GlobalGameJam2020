@@ -132,7 +132,7 @@ MonoBehaviour:
   - {fileID: 8779256176701153908}
   - {fileID: 3772971022732683311}
   deltaTime: 0.5
-  turnOffTime: 0.5
+  turnOffTime: 1
 --- !u!1 &3961178119949096285
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.835648
+  orthographic size: 10.7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -228,6 +228,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorInteract
       objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactor
+      objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: render
@@ -237,6 +242,11 @@ PrefabInstance:
         type: 3}
       propertyPath: key
       value: Drawer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: noReinteracting
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
@@ -312,6 +322,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorInteract (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactor
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
@@ -629,15 +644,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactor
+      objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: render
       value: 
-      objectReference: {fileID: 3623377042859850152}
+      objectReference: {fileID: 7850310140287018797}
     - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: key
       value: Picture
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: noReinteracting
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939950, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
@@ -734,6 +759,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorInteract (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactor
+      objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: render
@@ -742,7 +772,7 @@ PrefabInstance:
     - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: key
-      value: Hall
+      value: TV
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939950, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
@@ -929,6 +959,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: -7093881737283373285, guid: fe242bf31e0be4a2a96fd771ff0126f2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c2ba45bac96267a4bbae1189cf27ec0d, type: 2}
     - target: {fileID: -5568107063018797545, guid: fe242bf31e0be4a2a96fd771ff0126f2,
         type: 3}
       propertyPath: m_IsActive
@@ -1048,9 +1083,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8177586257038381110}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &3623377042859850152 stripped
+--- !u!212 &7850310140287018797 stripped
 SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 4842580603370269086, guid: fe242bf31e0be4a2a96fd771ff0126f2,
+  m_CorrespondingSourceObject: {fileID: -7093881737283373285, guid: fe242bf31e0be4a2a96fd771ff0126f2,
     type: 3}
   m_PrefabInstance: {fileID: 8177586257038381110}
   m_PrefabAsset: {fileID: 0}

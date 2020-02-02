@@ -137,6 +137,19 @@ PolygonCollider2D:
       - {x: 12.190776, y: 0.5667982}
       - {x: 17.014084, y: 0.8488016}
       - {x: 13.212127, y: 7.3922753}
+--- !u!114 &2709627715115085645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920324160149673931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d716c2ed194f8401298575ef39083605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Hall
 --- !u!1 &3815927742119913192
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +245,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.835648
+  orthographic size: 10.7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -256,19 +269,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3815927742174863672}
   m_Enabled: 1
---- !u!114 &2709627715115085645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920324160149673931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d716c2ed194f8401298575ef39083605, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: Hall
 --- !u!1001 &3815927740845687420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -280,6 +280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoxInteractor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939948, guid: 66649ecd2e3934387a13627502758a91,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactor
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939949, guid: 66649ecd2e3934387a13627502758a91,
         type: 3}
@@ -390,6 +395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InventoryInteractor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939948, guid: 66649ecd2e3934387a13627502758a91,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactor
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939949, guid: 66649ecd2e3934387a13627502758a91,
         type: 3}

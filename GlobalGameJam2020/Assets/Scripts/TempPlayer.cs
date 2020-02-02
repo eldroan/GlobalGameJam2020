@@ -71,4 +71,13 @@ public class TempPlayer : MonoBehaviour
         myParticleSystem.Play();
         animator.SetTrigger("Possess");
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Interactor") && interacting)
+        {
+            var interactor = collision.gameObject.GetComponent<Door>();
+            collision.enabled = !interactor.NoReointeracting;
+        }
+    }
 }
