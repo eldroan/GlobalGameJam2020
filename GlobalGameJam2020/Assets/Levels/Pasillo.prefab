@@ -49,6 +49,7 @@ Transform:
   - {fileID: 584417988996940906}
   - {fileID: 2670171135033158376}
   - {fileID: 2244002385118972588}
+  - {fileID: 3250673696385970432}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -423,7 +424,7 @@ PrefabInstance:
     - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: m_Name
-      value: DoorInteract (3)
+      value: SogaInteractor
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
@@ -533,7 +534,7 @@ PrefabInstance:
     - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: m_Name
-      value: DoorInteract (2)
+      value: SisterInteractor
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
@@ -623,7 +624,7 @@ PrefabInstance:
     - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: m_Name
-      value: DoorInteract (1)
+      value: AlmaInteractor
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
@@ -733,7 +734,7 @@ PrefabInstance:
     - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: m_Name
-      value: DoorInteract
+      value: MotherInteractor
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
@@ -813,6 +814,101 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5182840663350867734}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5766676827655428847
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4248806066756630697}
+    m_Modifications:
+    - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_Name
+      value: SisterInteractor2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: render
+      value: 
+      objectReference: {fileID: 4411144115732781443}
+    - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: key
+      value: Sister_bedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939950, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.1242404
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.559488
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -47.489643
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.023341054
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.012929315
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.17208469
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9847207
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 2.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -19.8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3308e41804e7d46f7901d3e9d5b9aa0c, type: 3}
+--- !u!4 &3250673696385970432 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9015059133193939951, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5766676827655428847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6347179380393722119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -823,7 +919,7 @@ PrefabInstance:
     - target: {fileID: 9015059133193939948, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}
       propertyPath: m_Name
-      value: DoorInteract (4)
+      value: LivingInteractor
       objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939949, guid: 3308e41804e7d46f7901d3e9d5b9aa0c,
         type: 3}

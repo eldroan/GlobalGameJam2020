@@ -7,5 +7,6 @@ public class PorticoKey : MonoBehaviour
     public void LoadScene()
     {
         Director.Instance.Interact("Livingroom", null);
+        AudioManager.Instance.PlayFX("Door");
     }
 }

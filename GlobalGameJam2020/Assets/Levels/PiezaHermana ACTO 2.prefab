@@ -354,6 +354,11 @@ PrefabInstance:
       propertyPath: noReinteracting
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9015059133193939949, guid: 66649ecd2e3934387a13627502758a91,
+        type: 3}
+      propertyPath: key
+      value: Cartas
+      objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939950, guid: 66649ecd2e3934387a13627502758a91,
         type: 3}
       propertyPath: m_Offset.x
@@ -567,6 +572,11 @@ PrefabInstance:
       propertyPath: render
       value: 
       objectReference: {fileID: 1798409848021851191}
+    - target: {fileID: 9015059133193939949, guid: 66649ecd2e3934387a13627502758a91,
+        type: 3}
+      propertyPath: key
+      value: Diario2
+      objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939950, guid: 66649ecd2e3934387a13627502758a91,
         type: 3}
       propertyPath: m_Offset.x

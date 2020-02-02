@@ -345,6 +345,11 @@ PrefabInstance:
       propertyPath: render
       value: 
       objectReference: {fileID: 3291427648105171838}
+    - target: {fileID: 9015059133193939949, guid: 66649ecd2e3934387a13627502758a91,
+        type: 3}
+      propertyPath: key
+      value: Diario1
+      objectReference: {fileID: 0}
     - target: {fileID: 9015059133193939950, guid: 66649ecd2e3934387a13627502758a91,
         type: 3}
       propertyPath: m_Offset.x

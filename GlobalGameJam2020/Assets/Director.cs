@@ -21,6 +21,11 @@ public class Director : MonoBehaviour
 
     private bool interactuoConAlfombra;
     private bool haveDrawerKey = false;
+    private bool maquinaBien = false;
+
+    private GameObject s;
+    private GameObject s2;
+    private GameObject s3;
 
     private void Awake() {
         Instance = this;
@@ -28,8 +33,9 @@ public class Director : MonoBehaviour
 
     private void Start()
     {
-        var s = GameObject.Find("SogaInteractor");
-        var s2 = GameObject.Find("SisterInteractor2");
+        s = GameObject.Find("SogaInteractor");
+        s2 = GameObject.Find("SisterInteractor2");
+        s3 = GameObject.Find("SisterInteractor");
 
         s.GetComponent<Collider2D>().enabled = false;
         s2.GetComponent<Collider2D>().enabled = false;
@@ -43,17 +49,14 @@ public class Director : MonoBehaviour
 
     public void ChangeAct()
     {
-        var s = GameObject.Find("SogaInteractor");
-        var s2 = GameObject.Find("SisterInteractor2");
-        var s3 = GameObject.Find("SisterInteractor");
-
         s.GetComponent<Collider2D>().enabled = true;
         s2.GetComponent<Collider2D>().enabled = true;
         s3.GetComponent<Collider2D>().enabled = false;
 
         foreach (var lvl in levels)
         {
-            lvl.LevelObject.SetActive(lvl.Key == "Atico");
+            if (lvl.LevelObject != null)
+                lvl.LevelObject.SetActive(lvl.Key == "Atico");
             lvl.Active = lvl.Key == "Atico";
         }
     }
@@ -71,7 +74,7 @@ public class Director : MonoBehaviour
                 activeLevel("Livingroom", player);
             break;
             case "Alma_bedroom":
-                TextManager.Instance.LoadSequence(player, "");
+                TextManager.Instance.LoadSequence(player, Constants.TextSequences.ALMA_ROOM_DIALOGO);
             break;
             case "Hall":
                 activeLevel("Hall", player);
@@ -89,20 +92,22 @@ public class Director : MonoBehaviour
                 interactTV(player);
             break;
             case "Atic_Box":
-                TextManager.Instance.LoadSequence(player, "");
+                TextManager.Instance.LoadSequence(player, Constants.TextSequences.ATIC_DIALOGO);
+                maquinaBien = true;
             break;
             case "Picture":
-                TextManager.Instance.LoadSequence(player, "");
+                TextManager.Instance.LoadSequence(player, Constants.TextSequences.CUADRO_DIALOGO);
             break;
             case "Drawer":
                 if (haveDrawerKey)
                 {
                     AudioManager.Instance.PlayFX("Drawer");
                     //TODO: Puzzle
+                    ChangeAct();
                 }
                 else
                 {
-                    TextManager.Instance.LoadSequence(player, "");
+                    TextManager.Instance.LoadSequence(player, Constants.TextSequences.DRAWER_DIALOGO);
                 }
                 break;
             case "Key":
@@ -114,8 +119,31 @@ public class Director : MonoBehaviour
             case "Alfombra":
                 //Texto de acá había una llave
                 interactuoConAlfombra = true;
-                TextManager.Instance.LoadSequence(player,"");
+                TextManager.Instance.LoadSequence(player, Constants.TextSequences.ALFOMBRA_DIALOGO);
             break;
+            case "Diario1":
+                TextManager.Instance.LoadSequence(player, Constants.TextSequences.DIARIO1_DIALOGO);
+                break;
+            case "Diario2":
+                TextManager.Instance.LoadSequence(player, Constants.TextSequences.LECTURA_DIARIO);
+                break;
+            case "Cartas":
+                //Puzzle
+                break; 
+            case "typewriter":
+                if (maquinaBien)
+                {
+                    //Escribir carta
+                }
+                else
+                {
+                    TextManager.Instance.LoadSequence(player, Constants.TextSequences.MAQUINA_ROTA_DIALOG);
+                }
+                break; 
+            case "BedTable":
+                haveDrawerKey = true;
+                TextManager.Instance.LoadSequence(player, Constants.TextSequences.LLAVE_MESALUZ);
+                break;
         }
     }
 
