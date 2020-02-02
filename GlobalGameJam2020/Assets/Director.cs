@@ -17,6 +17,8 @@ public class Director : MonoBehaviour
     public static Director Instance { get; private set;}
 
     [SerializeField] private Level[] levels;
+
+    private static bool interactuoConAlfombra;
     
     private void Awake() {
         Instance = this;
@@ -63,13 +65,15 @@ public class Director : MonoBehaviour
                 //Cajón depende de llave (la del living)
             break;
             case "Key":
-                //Interactuar (La del pórtico)
+                interactPorticoKey(player);
             break;
             case "Dog":
                 interactDog(player);
             break;
             case "Alfombra":
                 //Texto de acá había una llave
+                interactuoConAlfombra = true;
+                TextManager.Instance.LoadSequence("");
             break;
         }
     }
@@ -82,11 +86,26 @@ public class Director : MonoBehaviour
 
     }
 
-    private void interactDog(TempPlayer player) {
+    private void interactPorticoKey(TempPlayer player)
+    {
         var living = GameObject.Find("Portico");
 
-        living.GetComponent<PorticoGameplay>().PararPerro();
+        living.GetComponent<PorticoGameplay>().Play();
         player.AlowInteracting();
+    }
+
+    private void interactDog(TempPlayer player) {
+        if(interactuoConAlfombra)
+        {
+            var living = GameObject.Find("Portico");
+
+            living.GetComponent<PorticoGameplay>().PararPerro();
+            player.AlowInteracting();
+        }
+        else
+        {
+            AudioManager.Instance.PlayFX("dog");
+        }
     }
 
     private void activeLevel(string levelName, TempPlayer player) {
