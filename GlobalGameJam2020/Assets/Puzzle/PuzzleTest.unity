@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 809185709}
   - component: {fileID: 809185708}
   m_Layer: 0
-  m_Name: middle (1)
+  m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -699,7 +699,7 @@ Transform:
   m_GameObject: {fileID: 809185705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.1, z: 0}
-  m_LocalScale: {x: 10, y: 0.1, z: 10}
+  m_LocalScale: {x: 5.81, y: 0.1, z: 3.27}
   m_Children: []
   m_Father: {fileID: 1064882334}
   m_RootOrder: 9
@@ -713,7 +713,7 @@ BoxCollider:
   m_GameObject: {fileID: 809185705}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -735,7 +735,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc40302adbf9c43499bc961fb33ccd82, type: 2}
+  - {fileID: 2100000, guid: 2537d8c1375db4b1d87a3d41ba2b72af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1052,6 +1052,7 @@ MonoBehaviour:
   timeThreshold: 0.11
   topRight: {fileID: 1575048187}
   bottomLeft: {fileID: 1783278284}
+  testTexture: {fileID: 2800000, guid: 50cb9dc7e10514eeea78c2ccce7a00cb, type: 3}
 --- !u!1 &1212288288
 GameObject:
   m_ObjectHideFlags: 0

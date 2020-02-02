@@ -20,23 +20,36 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private float timeThreshold = 0.11f;
     [SerializeField] private Transform topRight;
     [SerializeField] private Transform bottomLeft;
+    [SerializeField] private Texture testTexture;
     private Dictionary<string, List<string>> adjacents;
     private Dictionary<string, List<string>> diagonal;
     private Dictionary<string, Transform> _piecesTransform;
+    private Dictionary<string, Vector3> _initialPositions;
     private float _adjacentDistance;
     private float _diagonalDistance;
     private float _allowedOffset = 0.4f;
     private bool _puzzleSolved;
     private bool _setupReady;
 
+    public bool PuzzleSolved => _puzzleSolved;
+    public static PuzzleManager Instance = null;
+    private Texture _currentTexture;
+
+
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+        
         _setupReady = false;
-        _puzzleSolved = false;
         _currentcamera = Camera.main;
-        int index = 0;
-        _piecesTransform = new Dictionary<string, Transform>();
 
         //Begin caca de codigo
         _adjacentDistance = Vector3.Distance(pieces[0].transform.position,pieces[1].transform.position);
@@ -65,9 +78,38 @@ public class PuzzleManager : MonoBehaviour
         diagonal.Add("lowerright", new List<string> {"middle"});
         //end caca de codigo
 
+        _initialPositions = new Dictionary<string, Vector3>();
+        foreach (var piece in pieces)
+        {
+            _initialPositions.Add(piece.name,piece.transform.position);
+        }
+
+        StartPuzzle();
+    }
+
+    public void StartPuzzle(Texture puzzleTexture = null)
+    {
+        _setupReady = false;
+        _piecesTransform = new Dictionary<string, Transform>();
+        _puzzleSolved = false;
+        int index = 0;
         foreach (var piece in pieces)
         {
             var matRenderer = piece.GetComponent<Renderer>().material;
+
+            if (puzzleTexture == null)
+            {
+                //Usar el de test
+                matRenderer.mainTexture = testTexture;
+                _currentTexture = testTexture;
+            }
+            else
+            {
+                //Usar el sprite que me pasaron de parametro
+                matRenderer.mainTexture = puzzleTexture;
+                _currentTexture = puzzleTexture;
+            }
+            
             var xoffset = 0.33f + 0.33f * (index % 3);
             var yoffset = index > 2 ? index > 5 ? 0.33f : 0.66f : 0.99f;
             matRenderer.mainTextureOffset = new Vector2(xoffset, yoffset);
@@ -84,15 +126,21 @@ public class PuzzleManager : MonoBehaviour
         _setupReady = true;
     }
 
+    public void Restart()
+    {
+        StartPuzzle(_currentTexture);
+    }
+
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
+        }
+        
         if (_puzzleSolved == false && _setupReady)
         {
-//            if (_grabbedTransform != null)
-//                Debug.Log("objeto: " + _grabbedTransform.position + " MOUSE : " +
-//                          _currentcamera.ScreenToWorldPoint(Input.mousePosition));
-//            else
-//                Debug.Log(Input.mousePosition);
+
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -145,6 +193,24 @@ public class PuzzleManager : MonoBehaviour
                 _currentTime += Time.deltaTime;
             }
         }
+        else
+        {
+            if (_puzzleSolved)
+            {
+                SnapInPlace();
+                _setupReady = false;
+            }
+        }
+    }
+
+    private void SnapInPlace()
+    {
+        var offset = _piecesTransform["middle"].transform.position - _initialPositions["middle"];
+
+        foreach (var keyname in _piecesTransform.Keys)
+        {
+            _piecesTransform[keyname].transform.position = _initialPositions[keyname] + offset;
+        }
     }
 
     private bool CheckIfPuzzleWasSolved()
@@ -161,7 +227,7 @@ public class PuzzleManager : MonoBehaviour
         )
         {
             var dist = Vector3.Distance(thisTransform.position, currentTransform.position);
-            Debug.Log($"{dir}: {(dir.Equals("adj") ? _adjacentDistance : _diagonalDistance)} - dist: {dist} - piezaThis: {piece.Key}");
+//            Debug.Log($"{dir}: {(dir.Equals("adj") ? _adjacentDistance : _diagonalDistance)} - dist: {dist} - piezaThis: {piece.Key}");
             switch (dir)
             {
                 case "adj":
