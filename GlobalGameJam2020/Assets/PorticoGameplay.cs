@@ -25,7 +25,9 @@ public class PorticoGameplay : MonoBehaviour
 
     public void PararPerro()
     {
+        perroGo.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
         perroGo.GetComponent<SpriteRenderer>().sprite = perroParado;
+        keyGo.SetActive(true);
     }
 
     public void Play()
