@@ -21,6 +21,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private Transform topRight;
     [SerializeField] private Transform bottomLeft;
     [SerializeField] private Texture testTexture;
+    [SerializeField] private List<Texture> puzzleList;
     private Dictionary<string, List<string>> adjacents;
     private Dictionary<string, List<string>> diagonal;
     private Dictionary<string, Transform> _piecesTransform;
@@ -30,15 +31,21 @@ public class PuzzleManager : MonoBehaviour
     private float _allowedOffset = 0.4f;
     private bool _puzzleSolved;
     private bool _setupReady;
+    private Action puzzleCompleted = delegate {  };
 
     public bool PuzzleSolved => _puzzleSolved;
     public static PuzzleManager Instance = null;
     private Texture _currentTexture;
+    private bool _snapped;
+    private Camera _callerCamera;
+
 
 
 
     private void Awake()
     {
+        puzzleList.ForEach(e => Debug.Log(e.name));
+        
         if (Instance == null)
         {
             Instance = this;
@@ -49,7 +56,10 @@ public class PuzzleManager : MonoBehaviour
         }
         
         _setupReady = false;
-        _currentcamera = Camera.main;
+        _currentcamera =  GameObject.FindGameObjectWithTag("puzzleCamera").GetComponent<Camera>() as Camera;
+        _currentcamera.enabled = true;
+        if(_callerCamera != null)
+            _callerCamera.enabled = false;
 
         //Begin caca de codigo
         _adjacentDistance = Vector3.Distance(pieces[0].transform.position,pieces[1].transform.position);
@@ -87,8 +97,28 @@ public class PuzzleManager : MonoBehaviour
         StartPuzzle();
     }
 
-    public void StartPuzzle(Texture puzzleTexture = null)
+    public void LoadPuzzle(string puzzleKey, Action puzzleCompletedCallback, Camera callerCamera)
     {
+        var puzzleTexture = puzzleList.FirstOrDefault(e => e.name == puzzleKey);
+
+        if (puzzleTexture)
+        {
+            puzzleCompleted = puzzleCompletedCallback ?? delegate {  };
+            _callerCamera = callerCamera ? callerCamera : null;
+
+            StartPuzzle(puzzleTexture);
+        }
+        else
+        {
+            Debug.LogError($"No se encontro la textura {puzzleKey}");
+        }
+
+    }
+
+
+    private void StartPuzzle(Texture puzzleTexture = null)
+    {
+        _snapped = false;
         _setupReady = false;
         _piecesTransform = new Dictionary<string, Transform>();
         _puzzleSolved = false;
@@ -195,8 +225,9 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
-            if (_puzzleSolved)
+            if (_puzzleSolved && !_snapped)
             {
+                _snapped = true;
                 SnapInPlace();
                 _setupReady = false;
             }
@@ -211,6 +242,18 @@ public class PuzzleManager : MonoBehaviour
         {
             _piecesTransform[keyname].transform.position = _initialPositions[keyname] + offset;
         }
+        
+        StartCoroutine(WaitAndFinish(2));
+    }
+    private IEnumerator WaitAndFinish(float waitTime)
+    {
+        Debug.Log("Arranque a esperar");
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("Termine de esperar");
+        _currentcamera.enabled = false;
+        if(_callerCamera != null)
+            _callerCamera.enabled = true;
+        puzzleCompleted();
     }
 
     private bool CheckIfPuzzleWasSolved()
