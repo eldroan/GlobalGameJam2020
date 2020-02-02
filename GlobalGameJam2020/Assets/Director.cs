@@ -104,6 +104,7 @@ public class Director : MonoBehaviour
         }
         else
         {
+            TextManager.Instance.LoadSequence(player,Constants.TextSequences.POE_DIALOGO);
             AudioManager.Instance.PlayFX("Dog");
         }
         player.AlowInteracting();
