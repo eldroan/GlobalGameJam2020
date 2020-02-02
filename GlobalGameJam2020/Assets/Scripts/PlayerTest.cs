@@ -10,6 +10,7 @@ public class PlayerTest : MonoBehaviour
     {
         myParticleSystem = GetComponent<ParticleSystem>();
         animator = GetComponent<Animator>();
+        myParticleSystem.Stop();
     }
 
     void Update()

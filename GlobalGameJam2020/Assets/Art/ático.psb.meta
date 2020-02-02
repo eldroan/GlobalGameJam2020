@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fbdb3f5c597ff45f69055f20dd58044c
+guid: d657f50b30ad94fe0bf232ca0f2f2e88
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,10 +94,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 2172
+      y: 2786
       width: 727
       height: 651
-    spriteID: 4a5abb52456304ab186c419cf37561cd
+    spriteID: afe4bd9e409244f1cb6173d7592fcccc
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -107,7 +107,29 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -497, y: 1202}
+    uvTransform: {x: -497, y: 1816}
+  - name: Capa 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2172
+      width: 906
+      height: 606
+    spriteID: bffff190ebcf346c39a849026c897cbb
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2680, y: 1187}
   - name: Background
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -119,7 +141,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-    spriteID: f5018a1bf5e8441c88022c6347937189
+    spriteID: 0575a932ecf9545f2bd64a8ed3e968f6
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -153,14 +175,21 @@ ScriptedImporter:
     spriteName: Layer 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 4a5abb52456304ab186c419cf37561cd
+    spriteID: afe4bd9e409244f1cb6173d7592fcccc
     layerID: 77
+    mosaicPosition: {x: 4, y: 2786}
+  - name: Capa 1
+    spriteName: Capa 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bffff190ebcf346c39a849026c897cbb
+    layerID: 79
     mosaicPosition: {x: 4, y: 2172}
   - name: Background
     spriteName: Background
     isGroup: 0
     parentIndex: -1
-    spriteID: f5018a1bf5e8441c88022c6347937189
+    spriteID: 0575a932ecf9545f2bd64a8ed3e968f6
     layerID: 1
     mosaicPosition: {x: 4, y: 4}
   characterData:
@@ -169,7 +198,7 @@ ScriptedImporter:
     dimension: {x: 0, y: 0}
     characterGroups: []
   generateGOHierarchy: 0
-  textureAssetName: "a\u0301tico Texture"
-  prefabAssetName: "a\u0301tico Prefab"
-  spriteLibAssetName: "a\u0301tico Sprite Lib"
+  textureAssetName: "a\u0301tico2 Texture"
+  prefabAssetName: "a\u0301tico2 Prefab"
+  spriteLibAssetName: "a\u0301tico2 Sprite Lib"
   secondarySpriteTextures: []

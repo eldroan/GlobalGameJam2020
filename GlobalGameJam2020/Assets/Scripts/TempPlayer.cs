@@ -1,51 +1,54 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TempPlayer : MonoBehaviour
 {
+    [SerializeField] private float xSpeed = 2f;
+    [SerializeField] private float ySpeed = 10f;
+
+    private bool enabledInteraction;
+    private string keyInteract;
     private bool showInventory = false;
+    private Vector3 lastPosition;
 
-    [SerializeField]
-    private Inventory inventory;
+    private bool interacting = false;
 
-    [SerializeField]
-    private Item testItem1;
-    [SerializeField]
-    private Item testItem2;
-    [SerializeField]
-    private Item testItem3;
+    private void Update()
+    {        
+        if (Input.GetButtonDown("Interact") && enabledInteraction) {
+            Director.Instance.Interact(keyInteract);
+            interacting = !interacting;
+        }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        inventory.gameObject.SetActive(showInventory);
+        if (!interacting) {        
+            float moveHorizontal = Input.GetAxis ("Horizontal");
+            float moveVertical = Input.GetAxis ("Vertical");
+
+            var horizontal = moveHorizontal * xSpeed * Time.deltaTime;
+            var vertical = moveVertical * ySpeed * Time.deltaTime;
+
+            this.transform.position = this.transform.position + (new Vector3(horizontal, vertical, 0));
+
+            var moveY = lastPosition - this.transform.position;
+
+            //this.transform.localScale = this.transform.localScale + (new Vector3(moveY.y, moveY.y, 0));
+
+            lastPosition = this.transform.position;
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EnableInteract(string key) 
     {
-        if (Input.GetButtonDown(Constants.InputKey.INVENTORY))
-        {
-            showInventory = !showInventory;
-            inventory.gameObject.SetActive(showInventory);
-        }
+        this.keyInteract = key;
+        enabledInteraction = true;
+    }
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            inventory.AddItem(testItem1);
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            inventory.AddItem(testItem2);
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            inventory.AddItem(testItem3);
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            inventory.RemoveItem(testItem2);
-        }
+    public void DisableInteract() 
+    {
+        this.keyInteract = "";
+        enabledInteraction = false;
     }
 }
