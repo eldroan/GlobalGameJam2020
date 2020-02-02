@@ -73,8 +73,7 @@ public class Director : MonoBehaviour
             case "Alfombra":
                 //Texto de acá había una llave
                 interactuoConAlfombra = true;
-                //TextManager.Instance.LoadSequence(player, "");
-                player.AlowInteracting();
+                TextManager.Instance.LoadSequence(player,"");
             break;
         }
     }

@@ -7,7 +7,7 @@ public class TextManagerTester : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TextManager.Instance.LoadSequence("textBlock0.json");
+        TextManager.Instance.LoadSequence(null,"textBlock0.json");
     }
 
     // Update is called once per frame
