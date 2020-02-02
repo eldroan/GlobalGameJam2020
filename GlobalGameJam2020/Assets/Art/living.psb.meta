@@ -1,0 +1,523 @@
+fileFormatVersion: 2
+guid: d5b2dce6c47594c5b89e14b7e95648cd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Capa 20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 3840
+      height: 2160
+    spriteID: 65be3ac96adc14629933ffa554a231e4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: luz del tele
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6508
+      width: 1657
+      height: 1651
+    spriteID: 053c013eff7434793a2df49cac8092af
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 6065}
+  - name: "luces l\xE1mpara"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2172
+      width: 3840
+      height: 2160
+    spriteID: 6308a0387acb840d690e423f11899232
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2172}
+  - name: alfombra
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3852
+      y: 2172
+      width: 2382
+      height: 729
+    spriteID: fac39bf17dec148849efc94916d2eac4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2611, y: 1819}
+  - name: TV
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1669
+      y: 7627
+      width: 396
+      height: 468
+    spriteID: 359bc9a95d1d440c89802dc34ca860e6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1669, y: 6438}
+  - name: pantalla blanca
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2073
+      y: 7627
+      width: 391
+      height: 447
+    spriteID: 37bc635ae3f5e4d538136894b849359a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2073, y: 6423}
+  - name: sillon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3852
+      y: 2909
+      width: 1062
+      height: 1097
+    spriteID: 927263703cb75453781046c05590daf8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3477, y: 2546}
+  - name: lamparas
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1669
+      y: 6508
+      width: 1147
+      height: 1111
+    spriteID: 57459b0cd51ac45d4921e9feac4981b6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1024, y: 5849}
+  - name: mueble
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2824
+      y: 6508
+      width: 933
+      height: 696
+    spriteID: 01ec17597c1d94a31b285db4d4da343b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -47, y: 5806}
+  - name: cuadro
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2472
+      y: 7627
+      width: 288
+      height: 321
+    spriteID: efc70f3e25eb442d788e5cfe88edf4c1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 197, y: 6134}
+  - name: puerta lateral
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2824
+      y: 7212
+      width: 429
+      height: 845
+    spriteID: 138f537e6e36044cf9784a19e9561278
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2335, y: 6228}
+  - name: Layer 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3261
+      y: 7212
+      width: 480
+      height: 631
+    spriteID: e57d83d51a6254ad1b827f0c2f67daef
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1567, y: 6016}
+  - name: cuarto
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4340
+      width: 3840
+      height: 2160
+    spriteID: eb91c9a34589d45e5b5e360dfb4e4761
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4340}
+  - name: Layer 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3852
+      y: 4
+      width: 3840
+      height: 2160
+    spriteID: 1a3a4394efbf746fd80872b6d6520d79
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3852, y: 4}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 3840, y: 2160}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 8192
+  textureActualHeight: 8192
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Capa 20
+    spriteName: Capa 20
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 65be3ac96adc14629933ffa554a231e4
+    layerID: 63
+    mosaicPosition: {x: 4, y: 4}
+  - name: luz del tele
+    spriteName: luz del tele
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 053c013eff7434793a2df49cac8092af
+    layerID: 70
+    mosaicPosition: {x: 4, y: 6508}
+  - name: "luces l\xE1mpara"
+    spriteName: "luces l\xE1mpara"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6308a0387acb840d690e423f11899232
+    layerID: 67
+    mosaicPosition: {x: 4, y: 2172}
+  - name: alfombra
+    spriteName: alfombra
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fac39bf17dec148849efc94916d2eac4
+    layerID: 30
+    mosaicPosition: {x: 3852, y: 2172}
+  - name: TV
+    spriteName: TV
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 359bc9a95d1d440c89802dc34ca860e6
+    layerID: 18
+    mosaicPosition: {x: 1669, y: 7627}
+  - name: pantalla blanca
+    spriteName: pantalla blanca
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 37bc635ae3f5e4d538136894b849359a
+    layerID: 36
+    mosaicPosition: {x: 2073, y: 7627}
+  - name: sillon
+    spriteName: sillon
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 927263703cb75453781046c05590daf8
+    layerID: 33
+    mosaicPosition: {x: 3852, y: 2909}
+  - name: lamparas
+    spriteName: lamparas
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 57459b0cd51ac45d4921e9feac4981b6
+    layerID: 47
+    mosaicPosition: {x: 1669, y: 6508}
+  - name: mueble
+    spriteName: mueble
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 01ec17597c1d94a31b285db4d4da343b
+    layerID: 44
+    mosaicPosition: {x: 2824, y: 6508}
+  - name: cuadro
+    spriteName: cuadro
+    isGroup: 0
+    parentIndex: -1
+    spriteID: efc70f3e25eb442d788e5cfe88edf4c1
+    layerID: 57
+    mosaicPosition: {x: 2472, y: 7627}
+  - name: puerta lateral
+    spriteName: puerta lateral
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 138f537e6e36044cf9784a19e9561278
+    layerID: 27
+    mosaicPosition: {x: 2824, y: 7212}
+  - name: Layer 1
+    spriteName: Layer 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e57d83d51a6254ad1b827f0c2f67daef
+    layerID: 72
+    mosaicPosition: {x: 3261, y: 7212}
+  - name: cuarto
+    spriteName: cuarto
+    isGroup: 0
+    parentIndex: -1
+    spriteID: eb91c9a34589d45e5b5e360dfb4e4761
+    layerID: 24
+    mosaicPosition: {x: 4, y: 4340}
+  - name: Layer 2
+    spriteName: Layer 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1a3a4394efbf746fd80872b6d6520d79
+    layerID: 73
+    mosaicPosition: {x: 3852, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: living Texture
+  prefabAssetName: living Prefab
+  spriteLibAssetName: living Sprite Lib
+  secondarySpriteTextures: []
