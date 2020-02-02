@@ -7,7 +7,7 @@ public class RandomizeColor : MonoBehaviour
 {
     [SerializeField] private GameObject[] image;
     [SerializeField] private float deltaTime = 0.2f;
-    [SerializeField] private float turnOffTime = 0.5f;
+    [SerializeField] private float turnOffTime = 1f;
 
     private float time;
 
