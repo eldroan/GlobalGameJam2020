@@ -38,6 +38,7 @@ public class TextManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(this);
             _currentPlayer = null;
             _showing = false;
             textBoxTransform.position =
