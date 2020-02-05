@@ -35,6 +35,7 @@ public static class Constants
         public static readonly string DIARIO1_DIALOGO = "diario-1.json";
         public static readonly string MAQUINA_ROTA_DIALOG = "maquina-rota.json"; 
         public static readonly string LLAVE_MESALUZ = "llave-mesa.json";
+        public static readonly string CARTA_FINAL = "carta-final.json";
 
     }
 }

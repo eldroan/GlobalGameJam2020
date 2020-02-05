@@ -115,7 +115,7 @@ public class TextManager : MonoBehaviour
 
     public void LoadSequence(TempPlayer currentPlayer,string sequenceName)
     {
-        var filePath = string.Format(pathTemplate, sequenceName);
+        var filePath =Application.streamingAssetsPath + "\\" + sequenceName;
 
         if (!File.Exists(filePath))
         {

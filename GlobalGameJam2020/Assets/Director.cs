@@ -134,7 +134,8 @@ public class Director : MonoBehaviour
             case "typewriter":
                 if (maquinaBien)
                 {
-                    //Escribir carta
+                    player.Possess();
+                    TextManager.Instance.LoadSequence(player, Constants.TextSequences.CARTA_FINAL);
                 }
                 else
                 {
